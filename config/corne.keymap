@@ -123,10 +123,10 @@
                 Game {
                 label = "Game";
                 bindings = <
-        &kp ESC  &kp FR_A &kp FR_Z  &kp FR_E     &kp FR_R  &kp FR_T    &trans  &trans      &kp KC_UP    &trans       &trans   &kp KC_BSPC
-        &kp TAB  &kp FR_Q &kp FR_S  &kp FR_D     &kp FR_F  &kp FR_G    &trans  &kp KC_LEFT &kp KC_DOWN  &kp KC_RIGHT &trans   &kp KC_RCTL
-        &kp LSFT &kp FR_W &kp FR_X  &kp FR_C     &kp FR_V  &kp FR_B    &trans  &trans      &trans       &trans       &kp KC_RSFT
-                                        &kp LEFT_ALT &kp LCTL  &kp KC_ENT  &kp KC_SPC  &kp KC_ENT  &kp KC_RALT
+        &kp ESC  &kp FR_A &kp FR_Z  &kp FR_E     &kp FR_R  &kp FR_T    &trans  &trans   &kp UP    &trans    &trans   &kp BSPC
+        &kp TAB  &kp FR_Q &kp FR_S  &kp FR_D     &kp FR_F  &kp FR_G    &trans  &kp LEFT &kp DOWN  &kp RIGHT &trans   &kp RCTL
+        &kp LSFT &kp FR_W &kp FR_X  &kp FR_C     &kp FR_V  &kp FR_B    &trans  &trans   &trans    &trans    &trans   &kp RSFT
+                                    &kp LEFT_ALT &kp LCTL  &kp KC_ENT  &kp KC_SPC  &kp KC_ENT  &kp KC_RALT
                 >;
                 };
         };
