@@ -116,7 +116,7 @@
         &trans  &trans   &trans   &trans   &trans   &trans         &kp FR_EURO &kp FR_7 &kp FR_8 &kp FR_9 &kp FR_SLSH &trans
         &trans  &trans   &trans   &trans   &trans   &trans         &kp FR_HASH &kp FR_4 &kp FR_5 &kp FR_6 &kp FR_ASTR &kp FR_EQL
         &trans  &trans   &trans   &trans   &trans   &trans         &kp FR_PERC &kp FR_1 &kp FR_2 &kp FR_3 &kp FR_MINS &trans
-                                &trans   &trans   &trans         &trans   &kp FR_PLUS  &trans
+                                  &trans   &trans   &trans         &trans   &kp FR_PLUS  &trans
                 >;
                 };
 
