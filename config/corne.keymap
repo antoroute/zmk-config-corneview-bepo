@@ -54,9 +54,9 @@
                 label = "Base";
                 bindings = <
         &kp FR_W         &kp FR_B     &kp FR_EACU &kp FR_P &kp FR_O    &kp FR_EGRV        &kp FR_CIRC &kp FR_V    &kp FR_D  &kp FR_L  &kp FR_J  &kp FR_Z
-        &hm TAB CAPSLOCK &kp FR_A     &kp FR_U  &kp FR_I   &hm FR_E 4 &kp FR_COMM        &kp FR_C    &hm FR_T 3 &kp FR_S  &kp FR_R  &kp FR_N  &kp FR_M
+        &hm TAB CAPSLOCK &kp FR_A     &kp FR_U  &kp FR_I   &lt 4 FR_E &kp FR_COMM        &kp FR_C    &lt 3 FR_T &kp FR_S  &kp FR_R  &kp FR_N  &kp FR_M
         &kp LCTRL        &kp FR_AGRV  &kp FR_Y  &kp FR_X   &kp FR_DOT  &kp FR_K           &kp FR_QUOT &kp FR_Q    &kp FR_G  &kp FR_H  &kp FR_F  &hm FR_C RSHIFT
-                                                &kp LGUI &hm SPACE 1 &hm RET LEFT_ALT    &kp RET    &hm BSPC 2  &hm ESC RIGHT_ALT
+                                                &kp LGUI  &lt 1 SPACE &hm RET LEFT_ALT    &kp RET    &lt 2 BSPC  &hm ESC RIGHT_ALT
                 >;
                 };
 
@@ -126,7 +126,7 @@
         &kp ESC  &kp FR_A &kp FR_Z  &kp FR_E     &kp FR_R  &kp FR_T    &trans  &trans   &kp UP    &trans    &trans   &kp BSPC
         &kp TAB  &kp FR_Q &kp FR_S  &kp FR_D     &kp FR_F  &kp FR_G    &trans  &kp LEFT &kp DOWN  &kp RIGHT &trans   &kp RCTL
         &kp LSFT &kp FR_W &kp FR_X  &kp FR_C     &kp FR_V  &kp FR_B    &trans  &trans   &trans    &trans    &trans   &kp RSFT
-                                    &kp LEFT_ALT &kp LCTRL &kp SPACE   &kp RET &mo 0    &kp RIGHT_ALT
+                                    &kp LEFT_ALT &kp LCTRL &kp SPACE   &kp RET &to 0    &kp RIGHT_ALT
                 >;
                 };
         };
