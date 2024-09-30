@@ -4,133 +4,167 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/outputs.h>
-#include <dt-bindings/zmk/ext_power.h>
 #include "keymap_french.h"
-&nice_view_spi {
-    cs-gpios = <&pro_micro 0 GPIO_ACTIVE_HIGH>;
-};
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
+
+&nice_view_spi { cs-gpios = <&pro_micro 0 GPIO_ACTIVE_HIGH>; };
 
 / {
-        combos {
-                combo_activate_layer_5 {
-                compatible = "zmk,combo";
-                label = "activate_layer_5";
-                key-positions = <&kp RET &kp LGUI>;
-                timeout-ms = <2000>; // Temps avant que le combo soit considéré comme "manqué"
-                bindings = <&tog 5>;
-                };
+    combos {
+        combo_activate_layer_5 {
+            compatible = "zmk,combo";
+            label = "activate_layer_5";
+            key-positions = <&kp RET &kp LGUI>;
+            timeout-ms = <2000>; // Temps avant que le combo soit considéré comme "manqué"
+            bindings = <&tog 5>;
         };
-        behaviors {
-                hm: homerow_mods {
-                        compatible = "zmk,behavior-hold-tap";
-                        label = "HOMEROW_MODS";
-                        #binding-cells = <2>;
-                        tapping-term-ms = <200>;
-                        quick_tap_ms = <0>;
-                        flavor = "tap-preferred";
-                        bindings = <&kp>, <&kp>;
-                };
-                td: tapdance {
-                        compatible = "zmk,behavior-hold-tap";
-                        label = "TAPDANCE";
-                        #binding-cells = <2>;
-                        tapping-term-ms = <150>;
-                        quick_tap_ms = <0>;
-                        flavor = "tap-preferred";
-                        bindings = <&kp>, <&kp>;
-                };
-        };      
-        keymap {
-                compatible = "zmk,keymap";
+    };
 
-                Base {
-                // -----------------------------------------------------------------------------------------
-                // | W    |  B  |  é  |  P  |  O  |  è  |   |  ^  |  V   |  D  |  L  |  J  | Z |
-                // | TAB  |  A  |  U  |  I  |  E  |  ,  |   |  C  |  T   |  S  |  R  |  N  | M |
-                // | LCTRL|  à  |  Y  |  X  |  .  |  K  |   |  '  |  Q   |  G  |  H  |  F  | C |
-                //                    | GUI | SPC | LWR |   | ENT | BKSP | ESC |
-
-                label = "Base";
-                bindings = <
-        &kp FR_W         &kp FR_B     &kp FR_EACU &kp FR_P &kp FR_O    &kp FR_EGRV        &kp FR_CIRC &kp FR_V    &kp FR_D  &kp FR_L  &kp FR_J  &kp FR_Z
-        &hm CAPSLOCK TAB &kp FR_A     &kp FR_U  &kp FR_I   &lt 4 FR_E &kp FR_COMM        &kp FR_C    &lt 3 FR_T &kp FR_S  &kp FR_R  &kp FR_N  &kp FR_M
-        &kp LCTRL        &kp FR_AGRV  &kp FR_Y  &kp FR_X   &kp FR_DOT  &kp FR_K           &kp FR_QUOT &kp FR_Q    &kp FR_G  &kp FR_H  &kp FR_F  &hm RSHIFT FR_CCED
-                                                &kp LGUI  &lt 1 SPACE &hm RET LEFT_ALT    &kp RET    &lt 2 BSPC  &hm ESC RIGHT_ALT
-                >;
-                };
-
-                Lower {
-                // -----------------------------------------------------------------------------------------
-                // |      |    |    |     |     |     |   |    |        |        |         |    |   |
-                // |      |    |    |     |  z  |     |   |    |        |   up   |         |    |   |
-                // |      |    |    |  x  |  c  |  v  |   |    |  left  |  down  |  right  |    |   |
-                //                  |     |     |     |   |    |        |        |
-                label = "Lower";
-                bindings = <
-        &trans  &trans  &trans   &trans       &trans       &trans         &trans  &trans   &trans   &trans    &trans        &kp BSPC
-        &trans  &trans  &trans   &trans       &kp LC(FR_Z) &trans         &trans  &trans   &kp UP   &trans    &kp PAGE_UP   &trans
-        &trans  &trans  &trans   &kp LC(FR_X) &kp LC(FR_C) &kp LC(FR_V)   &trans  &kp LEFT &kp DOWN &kp RIGHT &kp PAGE_DOWN &trans
-                                 &trans       &trans       &trans         &trans  &trans   &trans
-                >;
-                };
-
-                Raise {
-                // -----------------------------------------------------------------------------------------
-                // |       |  F1  |  F2  |  F3  |  F4  |  F5 |         |  F6  |  F7  |  F8  |  F9  | F10 |     |
-                // |       | PREV | NEXT | Vol -| Vol +| Play/Pause |  |      | left | down |  up  |right|     |
-                // | BTCLR | BT1  | BT2  | BT3  | BT4  | BT5 |         |      |      |      |      |     |     |
-                //                          |     |     |    |         |      |      |      |
-                label = "Raise";
-                bindings = <
-        &trans     &kp F1        &kp F2       &kp F3       &kp F4       &kp F5          &kp F6   &kp F7   &kp F8 &kp F9    &kp F10 &trans
-        &trans     &kp C_PREV    &kp C_NEXT   &kp C_VOL_DN &kp C_VOL_UP &kp C_PP         &trans  &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans
-        &bt BT_CLR &bt BT_SEL 0  &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4    &trans   &trans   &trans &trans    &trans &trans
-                                                                &trans   &trans   &trans       &trans   &trans   &trans
-                >;
-                };
-
-                Dev {
-                // -----------------------------------------------------------------------------------------
-                // |      |  !  |  @  |  #  |  $  |    %     |   |  ^  |  &  |  *  |  (  |  )  |   \   |
-                // |      |  1  |  2  |  3  |  4  |    5     |   |  -  |  =  |  `  |  [  |  ]  |  "|"  |
-                // |      |  6  |  7  |  8  |  9  |    0     |   |  _  |  +  |  ~  |  {  |  }  | RSHFT |
-                //                     | GUI |     | ALT/ENT |   | HYPER/SPACE | BKSP |    |
-                label = "Dev";
-                bindings = <
-        &kp FR_DLR   &kp FR_DQUO  &trans      &trans       &kp FR_LPRN  &kp FR_RPRN     &trans  &trans   &trans   &trans   &trans   &trans
-        &kp FR_EXLM  &kp FR_AMPR  &kp FR_LABK &kp FR_RABK  &kp FR_LBRC  &kp FR_RBRC     &trans  &trans   &trans   &trans   &trans   &trans
-        &kp FR_CIRC  &kp FR_PIPE  &kp FR_BSLS &kp FR_SLSH  &kp FR_LCBR  &kp FR_RCBR     &trans  &trans   &trans   &trans   &trans   &trans
-                                                &trans       &kp FR_MINS  &trans          &trans  &trans   &trans
-                >;
-                };
-
-                Num {
-                // -----------------------------------------------------------------------------------------
-                // |      |  !  |  @  |  #  |  $  |    %     |   |  ^  |  &  |  *  |  (  |  )  |   \   |
-                // |      |  1  |  2  |  3  |  4  |    5     |   |  -  |  =  |  `  |  [  |  ]  |  "|"  |
-                // |      |  6  |  7  |  8  |  9  |    0     |   |  _  |  +  |  ~  |  {  |  }  | RSHFT |
-                //                     | GUI |     | ALT/ENT |   | HYPER/SPACE | BKSP |    |
-                label = "Num";
-                bindings = <
-        &trans  &trans   &trans   &trans   &trans   &trans         &kp NUMBER_4 &kp FR_7 &kp FR_8 &kp FR_9 &kp LS(DOT) &trans
-        &trans  &trans   &trans   &trans   &trans   &trans         &kp FR_HASH &kp FR_4 &kp FR_5 &kp FR_6 &kp LS(SLASH) &kp FR_EQL
-        &trans  &trans   &trans   &trans   &trans   &trans         &kp FR_PERC &kp FR_1 &kp FR_2 &kp FR_3 &kp FR_MINS &trans
-                                  &trans   &trans   &trans         &trans   &kp FR_PLUS  &trans
-                >;
-                };
-
-                Game {
-                label = "Game";
-                bindings = <
-        &kp ESC  &kp FR_A &kp FR_Z  &kp FR_E     &kp FR_R  &kp FR_T    &trans  &trans   &kp UP    &trans    &trans   &kp BSPC
-        &kp TAB  &kp FR_Q &kp FR_S  &kp FR_D     &kp FR_F  &kp FR_G    &trans  &kp LEFT &kp DOWN  &kp RIGHT &trans   &kp RCTL
-        &kp LSFT &kp FR_W &kp FR_X  &kp FR_C     &kp FR_V  &kp FR_B    &trans  &trans   &trans    &trans    &trans   &kp RSFT
-                                    &kp LEFT_ALT &kp LCTRL &kp SPACE   &kp RET &to 0    &kp RIGHT_ALT
-                >;
-                };
+    behaviors {
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
         };
+
+        td: tapdance {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TAPDANCE";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+    };
+
+    macros {
+        eaccent: eaccent {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp APOSTROPHE &kp E>;
+            label = "EACCENT";
+        };
+
+        eaccent2: eaccent2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE &kp E>;
+            label = "EACCENT2";
+        };
+
+        aaccent: aaccent {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE &kp A>;
+            label = "AACCENT";
+        };
+
+        ccedille: ccedille {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA &kp C>;
+            label = "CCEDILLE";
+        };
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        Base {
+            // -----------------------------------------------------------------------------------------
+            // | W    |  B  |  é  |  P  |  O  |  è  |   |  ^  |  V   |  D  |  L  |  J  | Z |
+            // | TAB  |  A  |  U  |  I  |  E  |  ,  |   |  C  |  T   |  S  |  R  |  N  | M |
+            // | LCTRL|  à  |  Y  |  X  |  .  |  K  |   |  '  |  Q   |  G  |  H  |  F  | C |
+            //                    | GUI | SPC | LWR |   | ENT | BKSP | ESC |
+
+            label = "Base";
+            bindings = <
+&kp W         &kp B     &eaccent  &kp P     &kp O        &eaccent2             &kp A           &kp V       &kp D                 &kp L  &kp J  &kp Z
+&hm CAPS TAB  &kp A     &kp U     &kp I     &lt 4 E      &kp COMMA             &kp C           &lt 3 T     &kp S                 &kp R  &kp N  &kp M
+&kp LCTRL     &aaccent  &kp Y     &kp X     &kp DOT      &kp K                 &kp APOSTROPHE  &kp Q       &kp G                 &kp H  &kp F  &ccedille
+                                  &kp LGUI  &lt 1 SPACE  &hm LEFT_ALT ENTER    &kp RET         &lt 2 BSPC  &hm LC(LEFT_ALT) ESC
+            >;
+        };
+
+        Lower {
+            // -----------------------------------------------------------------------------------------
+            // |      |    |    |     |     |     |   |    |        |        |         |    |   |
+            // |      |    |    |     |  z  |     |   |    |        |   up   |         |    |   |
+            // |      |    |    |  x  |  c  |  v  |   |    |  left  |  down  |  right  |    |   |
+            //                  |     |     |     |   |    |        |        |
+
+            label = "Lower";
+            bindings = <
+&trans  &trans  &trans  &trans     &trans        &trans         &trans  &trans    &kp UP    &trans     &kp PAGE_UP    &kp BSPC
+&trans  &trans  &trans  &trans     &kp K_CANCEL  &trans         &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &kp PAGE_DOWN  &trans
+&trans  &trans  &trans  &kp K_CUT  &kp K_COPY    &kp K_PASTE    &trans  &trans    &trans    &trans     &trans         &trans
+                        &trans     &trans        &trans         &trans  &trans    &trans
+            >;
+        };
+
+        Raise {
+            // -----------------------------------------------------------------------------------------
+            // |       |  F1  |  F2  |  F3  |  F4  |  F5 |         |  F6  |  F7  |  F8  |  F9  | F10 |     |
+            // |       | PREV | NEXT | Vol -| Vol +| Play/Pause |  |      | left | down |  up  |right|     |
+            // | BTCLR | BT1  | BT2  | BT3  | BT4  | BT5 |         |      |      |      |      |     |     |
+            //                          |     |     |    |         |      |      |      |
+
+            label = "Raise";
+            bindings = <
+&trans      &kp F1        &kp F2        &kp F3        &kp F4        &kp F5          &kp F6        &kp F7        &kp F8        &kp F9        &kp F10       &trans
+&trans      &kp C_PREV    &kp C_NEXT    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PP        &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans
+                                        &trans        &trans        &trans          &trans        &trans        &trans
+            >;
+        };
+
+        Dev {
+            // -----------------------------------------------------------------------------------------
+            // |      |  !  |  @  |  #  |  $  |    %     |   |  ^  |  &  |  *  |  (  |  )  |   \   |
+            // |      |  1  |  2  |  3  |  4  |    5     |   |  -  |  =  |  `  |  [  |  ]  |  "|"  |
+            // |      |  6  |  7  |  8  |  9  |    0     |   |  _  |  +  |  ~  |  {  |  }  | RSHFT |
+            //                     | GUI |     | ALT/ENT |   | HYPER/SPACE | BKSP |    |
+
+            label = "Dev";
+            bindings = <
+&kp DOLLAR       &kp DQT   &trans         &trans            &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &trans  &trans  &trans  &trans  &trans  &trans
+&kp EXCLAMATION  &kp AMPS  &kp LESS_THAN  &kp GREATER_THAN  &kp LEFT_BRACKET      &kp RIGHT_BRACKET        &trans  &trans  &trans  &trans  &trans  &trans
+&kp CARET        &kp PIPE  &kp BACKSLASH  &kp SLASH         &kp LEFT_BRACE        &kp RIGHT_BRACE          &trans  &trans  &trans  &trans  &trans  &trans
+                                          &trans            &kp UNDERSCORE        &trans                   &trans  &trans  &trans
+            >;
+        };
+
+        Num {
+            // -----------------------------------------------------------------------------------------
+            // |      |  !  |  @  |  #  |  $  |    %     |   |  ^  |  &  |  *  |  (  |  )  |   \   |
+            // |      |  1  |  2  |  3  |  4  |    5     |   |  -  |  =  |  `  |  [  |  ]  |  "|"  |
+            // |      |  6  |  7  |  8  |  9  |    0     |   |  _  |  +  |  ~  |  {  |  }  | RSHFT |
+            //                     | GUI |     | ALT/ENT |   | HYPER/SPACE | BKSP |    |
+
+            label = "Num";
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &kp NUMBER_4  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp SLASH     &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp POUND     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp ASTERISK  &kp EQUAL
+&trans  &trans  &trans  &trans  &trans  &trans    &kp PRCNT     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp MINUS     &kp PLUS
+                        &trans  &trans  &trans    &trans        &kp NUMBER_0  &trans
+            >;
+        };
+
+        Game {
+            label = "Game";
+            bindings = <
+&kp ESC         &kp Q  &kp W  &kp E         &kp R      &kp T        &trans   &trans    &kp UP         &trans     &trans  &kp BSPC
+&kp TAB         &kp A  &kp S  &kp D         &kp F      &kp G        &trans   &kp LEFT  &kp DOWN       &kp RIGHT  &trans  &kp RCTL
+&kp LEFT_SHIFT  &kp Z  &kp X  &kp C         &kp V      &kp B        &trans   &trans    &trans         &trans     &trans  &kp RSFT
+                              &kp LEFT_ALT  &kp SPACE  &kp ENTER    &kp RET  &to 0     &kp RIGHT_ALT
+            >;
+        };
+    };
 };
