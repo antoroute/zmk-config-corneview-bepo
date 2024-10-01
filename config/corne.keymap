@@ -183,10 +183,10 @@
 
             label = "Lower";
             bindings = <
-&trans      &trans  &trans  &trans     &trans        &trans         &trans  &trans    &kp UP    &trans     &kp PAGE_UP    &kp BSPC
-&kp LSHIFT  &trans  &trans  &trans     &kp K_CANCEL  &trans         &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &kp PAGE_DOWN  &trans
-&trans      &trans  &trans  &kp K_CUT  &kp K_COPY    &kp K_PASTE    &trans  &trans    &trans    &trans     &trans         &trans
-                            &trans     &trans        &trans         &trans  &trans    &trans
+&trans      &trans  &trans  &trans     &trans     &trans             &trans  &trans    &kp UP    &trans     &kp PAGE_UP    &kp BSPC
+&kp LSHIFT  &trans  &trans  &trans     &kp LC(Y)  &trans             &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &kp PAGE_DOWN  &trans
+&trans      &trans  &trans  &kp LC(X)  &kp LC(C)  &kp LC(K_PASTE)    &trans  &trans    &trans    &trans     &trans         &trans
+                            &trans     &trans     &trans             &trans  &trans    &trans
             >;
         };
 
