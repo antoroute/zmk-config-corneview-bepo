@@ -73,6 +73,27 @@
             bindings = <&kp COMMA &kp C>;
             label = "CCEDILLE";
         };
+
+        euro: euro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>;
+            label = "EURO";
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        to_game {
+            bindings = <&sl 5>;
+            key-positions = <0 1>;
+        };
+
+        eng {
+            bindings = <&kp GLOBE>;
+            key-positions = <12 13>;
+        };
     };
 
     keymap {
@@ -135,7 +156,7 @@
 
             label = "Dev";
             bindings = <
-&kp DOLLAR       &kp DQT   &trans         &trans            &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &trans  &trans  &trans  &trans  &trans  &trans
+&kp DOLLAR       &kp DQT   &kp MINUS      &kp PLUS          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &trans  &trans  &trans  &trans  &trans  &trans
 &kp EXCLAMATION  &kp AMPS  &kp LESS_THAN  &kp GREATER_THAN  &kp LEFT_BRACKET      &kp RIGHT_BRACKET        &trans  &trans  &trans  &trans  &trans  &trans
 &kp CARET        &kp PIPE  &kp BACKSLASH  &kp SLASH         &kp LEFT_BRACE        &kp RIGHT_BRACE          &trans  &trans  &trans  &trans  &trans  &trans
                                           &trans            &kp UNDERSCORE        &trans                   &trans  &trans  &trans
@@ -151,10 +172,10 @@
 
             label = "Num";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &kp NUMBER_4  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp SLASH     &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp POUND     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp ASTERISK  &kp EQUAL
-&trans  &trans  &trans  &trans  &trans  &trans    &kp PRCNT     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp MINUS     &kp PLUS
-                        &trans  &trans  &trans    &trans        &kp NUMBER_0  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &euro      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp SLASH     &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp POUND  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp ASTERISK  &kp EQUAL
+&trans  &trans  &trans  &trans  &trans  &trans    &kp PRCNT  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp MINUS     &kp PLUS
+                        &trans  &trans  &trans    &trans     &kp NUMBER_0  &trans
             >;
         };
 
@@ -162,8 +183,8 @@
             label = "Game";
             bindings = <
 &kp ESC         &kp Q  &kp W  &kp E         &kp R      &kp T        &trans   &trans    &kp UP         &trans     &trans  &kp BSPC
-&kp TAB         &kp A  &kp S  &kp D         &kp F      &kp G        &trans   &kp LEFT  &kp DOWN       &kp RIGHT  &trans  &kp RCTL
-&kp LEFT_SHIFT  &kp Z  &kp X  &kp C         &kp V      &kp B        &trans   &trans    &trans         &trans     &trans  &kp RSFT
+&kp TAB         &kp A  &kp S  &kp D         &kp F      &kp G        &trans   &kp LEFT  &kp DOWN       &kp RIGHT  &trans  &trans
+&kp LEFT_SHIFT  &kp Z  &kp X  &kp C         &kp V      &kp B        &trans   &trans    &trans         &trans     &trans  &trans
                               &kp LEFT_ALT  &kp SPACE  &kp ENTER    &kp RET  &to 0     &kp RIGHT_ALT
             >;
         };
