@@ -150,7 +150,7 @@
         };
 
         lang {
-            bindings = <&kp GLOBE>;
+            bindings = <&kp C_AL_KEYBOARD_LAYOUT>;
             key-positions = <12 13>;
         };
     };
