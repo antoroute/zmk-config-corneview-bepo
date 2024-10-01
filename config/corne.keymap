@@ -167,10 +167,10 @@
 
             label = "Base";
             bindings = <
-&kp W         &kp B     &eaccent  &kp P     &kp O        &eaccent2             &kp AT          &kp V       &kp D                 &kp L  &kp J  &kp Z
-&hm CAPS TAB  &kp A     &kp U     &kp I     &lt 4 E      &kp COMMA             &kp C           &lt 3 T     &kp S                 &kp R  &kp N  &kp M
-&kp LCTRL     &aaccent  &kp Y     &kp X     &kp DOT      &kp K                 &kp APOSTROPHE  &kp Q       &kp G                 &kp H  &kp F  &ccedille
-                                  &kp LGUI  &lt 1 SPACE  &hm LEFT_ALT ENTER    &kp RET         &lt 2 BSPC  &hm LC(LEFT_ALT) ESC
+&kp W         &kp B     &eaccent  &kp P     &kp O        &eaccent2             &kp AT              &kp V       &kp D                 &kp L  &kp J  &kp Z
+&hm CAPS TAB  &kp A     &kp U     &kp I     &lt 4 E      &kp COMMA             &kp C               &lt 3 T     &kp S                 &kp R  &kp N  &kp M
+&kp LCTRL     &aaccent  &kp Y     &kp X     &kp DOT      &kp K                 &kp APOSTROPHE      &kp Q       &kp G                 &kp H  &kp F  &ccedille
+                                  &kp LGUI  &lt 1 SPACE  &hm LEFT_ALT ENTER    &hm LEFT_SHIFT RET  &lt 2 BSPC  &hm LC(LEFT_ALT) ESC
             >;
         };
 
