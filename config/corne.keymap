@@ -52,66 +52,62 @@
 
         eaccent2: eaccent2 {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <40>;
-            tap-ms = <40>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_ALT>,
-                <&macro_tap>,
-                <&kp NUMBER_0 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_2>,
-                <&macro_release>,
-                <&kp LEFT_ALT>;
-
             label = "EACCENT2";
+            #binding-cells = <0>;
+            wait-ms = <20>;
+            tap-ms = <10>;
+            bindings 
+                = <&macro_press &kp LEFT_ALT>
+                , <&macro_tap &kp KP_NUMBER_0>
+                , <&macro_tap &kp KP_NUMBER_2>
+                , <&macro_tap &kp KP_NUMBER_3>
+                , <&macro_tap &kp KP_NUMBER_2>
+                , <&macro_release &kp LEFT_ALT>;
         };
 
         aaccent: aaccent {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <40>;
-            tap-ms = <40>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_ALT>,
-                <&macro_tap>,
-                <&kp NUMBER_0 &kp NUMBER_2 &kp NUMBER_2 &kp NUMBER_4>,
-                <&macro_release>,
-                <&kp LEFT_ALT>;
-
             label = "AACCENT";
+            #binding-cells = <0>;
+            wait-ms = <20>;
+            tap-ms = <10>;
+            bindings 
+                = <&macro_press &kp LEFT_ALT>
+                , <&macro_tap &kp KP_NUMBER_0>
+                , <&macro_tap &kp KP_NUMBER_2>
+                , <&macro_tap &kp KP_NUMBER_2>
+                , <&macro_tap &kp KP_NUMBER_4>
+                , <&macro_release &kp LEFT_ALT>;
         };
 
         ccedille: ccedille {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <40>;
-            tap-ms = <40>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_ALT>,
-                <&macro_tap>,
-                <&kp NUMBER_0 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_1>,
-                <&macro_release>,
-                <&kp LEFT_ALT>;
-
             label = "CCEDILLE";
+            #binding-cells = <0>;
+            wait-ms = <20>;
+            tap-ms = <10>;
+            bindings 
+                = <&macro_press &kp LEFT_ALT>
+                , <&macro_tap &kp KP_NUMBER_0>
+                , <&macro_tap &kp KP_NUMBER_2>
+                , <&macro_tap &kp KP_NUMBER_3>
+                , <&macro_tap &kp KP_NUMBER_1>
+                , <&macro_release &kp LEFT_ALT>;
         };
 
         euro: euro {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <40>;
-            tap-ms = <40>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_ALT>,
-                <&macro_tap>,
-                <&kp NUMBER_0 &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_8>,
-                <&macro_release>,
-                <&kp LEFT_ALT>;
-
             label = "EURO";
+            #binding-cells = <0>;
+            wait-ms = <20>;
+            tap-ms = <10>;
+            bindings 
+                = <&macro_press &kp LEFT_ALT>
+                , <&macro_tap &kp KP_NUMBER_0>
+                , <&macro_tap &kp KP_NUMBER_1>
+                , <&macro_tap &kp KP_NUMBER_2>
+                , <&macro_tap &kp KP_NUMBER_8>
+                , <&macro_release &kp LEFT_ALT>;
         };
     };
 
