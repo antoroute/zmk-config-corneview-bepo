@@ -48,6 +48,7 @@
                 <&kp NUMBER_0 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_3>,
                 <&macro_release>,
                 <&kp LALT>;
+            label = "EACCENT";
         };
 
         eaccent2: eaccent2 {
@@ -62,6 +63,7 @@
                 <&kp NUMBER_0 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_2>,
                 <&macro_release>,
                 <&kp LALT>;
+            label = "EACCENT2";
         };
 
         aaccent: aaccent {
@@ -76,6 +78,7 @@
                 <&kp NUMBER_0 &kp NUMBER_2 &kp NUMBER_2 &kp NUMBER_4>,
                 <&macro_release>,
                 <&kp LALT>;
+            label = "AACCENT";
         };
 
         ccedille: ccedille {
@@ -90,6 +93,7 @@
                 <&kp NUMBER_0 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_1>,
                 <&macro_release>,
                 <&kp LALT>;
+            label = "CCEDILLE";
         };
 
         euro: euro {
@@ -104,6 +108,7 @@
                 <&kp NUMBER_0 &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_8>,
                 <&macro_release>,
                 <&kp LALT>;
+            label = "EURO";
         };
     };
 
