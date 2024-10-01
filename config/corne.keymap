@@ -54,7 +54,7 @@
                 <&macro_press>,
                 <&kp LALT>,
                 <&macro_tap>,
-                <&kp KP_N0 &kp KP_N2 &kp KP_N3 &kp KP_N3>,
+                <&kp NUMBER_0 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_3>,
                 <&macro_release>,
                 <&kp LALT>;
 
@@ -70,7 +70,7 @@
                 <&macro_press>,
                 <&kp LALT>,
                 <&macro_tap>,
-                <&kp KP_N0 &kp KP_N2 &kp KP_N3 &kp KP_N2>,
+                <&kp NUMBER_0 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_2>,
                 <&macro_release>,
                 <&kp LALT>;
 
@@ -86,7 +86,7 @@
                 <&macro_press>,
                 <&kp LALT>,
                 <&macro_tap>,
-                <&kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N4>,
+                <&kp NUMBER_0 &kp NUMBER_2 &kp NUMBER_2 &kp NUMBER_4>,
                 <&macro_release>,
                 <&kp LALT>;
 
@@ -102,7 +102,7 @@
                 <&macro_press>,
                 <&kp LALT>,
                 <&macro_tap>,
-                <&kp KP_N0 &kp KP_N2 &kp KP_N3 &kp KP_N1>,
+                <&kp NUMBER_0 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_1>,
                 <&macro_release>,
                 <&kp LALT>;
 
@@ -118,7 +118,7 @@
                 <&macro_press>,
                 <&kp LALT>,
                 <&macro_tap>,
-                <&kp KP_N0 &kp KP_N1 &kp KP_N2 &kp KP_N8>,
+                <&kp NUMBER_0 &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_8>,
                 <&macro_release>,
                 <&kp LALT>;
 
