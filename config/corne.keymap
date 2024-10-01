@@ -50,14 +50,11 @@
             #binding-cells = <0>;
             wait-ms = <40>;
             tap-ms = <40>;
-            bindings =
-                <&macro_press>,
-                <&kp LALT>,
-                <&macro_tap>,
-                <&kp NUMBER_0 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_3>,
-                <&macro_release>,
-                <&kp LALT>;
-
+            bindings 
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp NUMBER_0 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_3>
+                , <&macro_release &kp LALT>
+                ;
             label = "EACCENT";
         };
 
@@ -66,14 +63,11 @@
             #binding-cells = <0>;
             wait-ms = <40>;
             tap-ms = <40>;
-            bindings =
-                <&macro_press>,
-                <&kp LALT>,
-                <&macro_tap>,
-                <&kp NUMBER_0 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_2>,
-                <&macro_release>,
-                <&kp LALT>;
-
+            bindings 
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp NUMBER_0 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_2>
+                , <&macro_release &kp LALT>
+                ;
             label = "EACCENT2";
         };
 
@@ -82,14 +76,11 @@
             #binding-cells = <0>;
             wait-ms = <40>;
             tap-ms = <40>;
-            bindings =
-                <&macro_press>,
-                <&kp LALT>,
-                <&macro_tap>,
-                <&kp NUMBER_0 &kp NUMBER_2 &kp NUMBER_2 &kp NUMBER_4>,
-                <&macro_release>,
-                <&kp LALT>;
-
+            bindings 
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp NUMBER_0 &kp NUMBER_2 &kp NUMBER_2 &kp NUMBER_4>
+                , <&macro_release &kp LALT>
+                ;
             label = "AACCENT";
         };
 
@@ -98,14 +89,11 @@
             #binding-cells = <0>;
             wait-ms = <40>;
             tap-ms = <40>;
-            bindings =
-                <&macro_press>,
-                <&kp LALT>,
-                <&macro_tap>,
-                <&kp NUMBER_0 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_1>,
-                <&macro_release>,
-                <&kp LALT>;
-
+            bindings 
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp NUMBER_0 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_1>
+                , <&macro_release &kp LALT>
+                ;
             label = "CCEDILLE";
         };
 
@@ -114,14 +102,11 @@
             #binding-cells = <0>;
             wait-ms = <40>;
             tap-ms = <40>;
-            bindings =
-                <&macro_press>,
-                <&kp LALT>,
-                <&macro_tap>,
-                <&kp NUMBER_0 &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_8>,
-                <&macro_release>,
-                <&kp LALT>;
-
+            bindings 
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp NUMBER_0 &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_8>
+                , <&macro_release &kp LALT>
+                ;
             label = "EURO";
         };
     };
