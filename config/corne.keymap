@@ -49,35 +49,65 @@
         eaccent: eaccent {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kt APOSTROPHE &kp E>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings
+                = <&macro_press   &kp LALT>
+                , <&macro_tap     &kp KP_N0 &kp KP_N2 &kp KP_N3 &kp KP_N3>
+                , <&macro_release &kp LALT>
+                ;
             label = "EACCENT";
         };
 
         eaccent2: eaccent2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&sk GRAVE &kp E>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings
+                = <&macro_press   &kp LALT>
+                , <&macro_tap     &kp KP_N0 &kp KP_N2 &kp KP_N3 &kp KP_N2>
+                , <&macro_release &kp LALT>
+                ;
             label = "EACCENT2";
         };
 
         aaccent: aaccent {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp GRAVE &kp A>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings
+                = <&macro_press   &kp LALT>
+                , <&macro_tap     &kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N4>
+                , <&macro_release &kp LALT>
+                ;
             label = "AACCENT";
         };
 
         ccedille: ccedille {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp COMMA &kp C>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings
+                = <&macro_press   &kp LALT>
+                , <&macro_tap     &kp KP_N0 &kp KP_N2 &kp KP_N3 &kp KP_N1>
+                , <&macro_release &kp LALT>
+                ;
             label = "CCEDILLE";
         };
 
         euro: euro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp C>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings
+                = <&macro_press   &kp LALT>
+                , <&macro_tap     &kp KP_N0 &kp KP_N1 &kp KP_N2 &kp KP_N8>
+                , <&macro_release &kp LALT>
+                ;
             label = "EURO";
         };
     };
