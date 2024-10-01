@@ -43,11 +43,11 @@
             tap-ms = <40>;
             bindings =
                 <&macro_press>,
-                <&kp LALT>,
+                <&kp LEFT_ALT>,
                 <&macro_tap>,
                 <&kp NUMBER_0 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_3>,
                 <&macro_release>,
-                <&kp LALT>;
+                <&kp LEFT_ALT>;
             label = "EACCENT";
         };
 
@@ -58,11 +58,11 @@
             tap-ms = <40>;
             bindings =
                 <&macro_press>,
-                <&kp LALT>,
+                <&kp LEFT_ALT>,
                 <&macro_tap>,
                 <&kp NUMBER_0 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_2>,
                 <&macro_release>,
-                <&kp LALT>;
+                <&kp LEFT_ALT>;
             label = "EACCENT2";
         };
 
@@ -73,11 +73,11 @@
             tap-ms = <40>;
             bindings =
                 <&macro_press>,
-                <&kp LALT>,
+                <&kp LEFT_ALT>,
                 <&macro_tap>,
                 <&kp NUMBER_0 &kp NUMBER_2 &kp NUMBER_2 &kp NUMBER_4>,
                 <&macro_release>,
-                <&kp LALT>;
+                <&kp LEFT_ALT>;
             label = "AACCENT";
         };
 
@@ -88,11 +88,11 @@
             tap-ms = <40>;
             bindings =
                 <&macro_press>,
-                <&kp LALT>,
+                <&kp LEFT_ALT>,
                 <&macro_tap>,
                 <&kp NUMBER_0 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_1>,
                 <&macro_release>,
-                <&kp LALT>;
+                <&kp LEFT_ALT>;
             label = "CCEDILLE";
         };
 
@@ -103,11 +103,11 @@
             tap-ms = <40>;
             bindings =
                 <&macro_press>,
-                <&kp LALT>,
+                <&kp LEFT_ALT>,
                 <&macro_tap>,
                 <&kp NUMBER_0 &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_8>,
                 <&macro_release>,
-                <&kp LALT>;
+                <&kp LEFT_ALT>;
             label = "EURO";
         };
     };
