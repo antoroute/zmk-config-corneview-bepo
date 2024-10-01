@@ -12,15 +12,6 @@
 &nice_view_spi { cs-gpios = <&pro_micro 0 GPIO_ACTIVE_HIGH>; };
 
 / {
-    combos {
-        combo_activate_layer_5 {
-            compatible = "zmk,combo";
-            label = "activate_layer_5";
-            key-positions = <&kp RET &kp LGUI>;
-            timeout-ms = <2000>; // Temps avant que le combo soit considéré comme "manqué"
-            bindings = <&tog 5>;
-        };
-    };
 
     behaviors {
         hm: homerow_mods {
