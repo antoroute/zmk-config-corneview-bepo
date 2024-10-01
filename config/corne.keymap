@@ -41,13 +41,19 @@
             #binding-cells = <0>;
             wait-ms = <20>;
             tap-ms = <10>;
-            bindings 
-                = <&macro_press &kp LEFT_ALT>
-                , <&macro_tap &kp KP_NUMBER_0>
-                , <&macro_tap &kp KP_NUMBER_2>
-                , <&macro_tap &kp KP_NUMBER_3>
-                , <&macro_tap &kp KP_NUMBER_3>
-                , <&macro_release &kp LEFT_ALT>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_0>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_2>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_3>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_3>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
         };
 
         eaccent2: eaccent2 {
@@ -56,13 +62,19 @@
             #binding-cells = <0>;
             wait-ms = <20>;
             tap-ms = <10>;
-            bindings 
-                = <&macro_press &kp LEFT_ALT>
-                , <&macro_tap &kp KP_NUMBER_0>
-                , <&macro_tap &kp KP_NUMBER_2>
-                , <&macro_tap &kp KP_NUMBER_3>
-                , <&macro_tap &kp KP_NUMBER_2>
-                , <&macro_release &kp LEFT_ALT>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_0>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_2>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_3>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_2>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
         };
 
         aaccent: aaccent {
@@ -71,13 +83,19 @@
             #binding-cells = <0>;
             wait-ms = <20>;
             tap-ms = <10>;
-            bindings 
-                = <&macro_press &kp LEFT_ALT>
-                , <&macro_tap &kp KP_NUMBER_0>
-                , <&macro_tap &kp KP_NUMBER_2>
-                , <&macro_tap &kp KP_NUMBER_2>
-                , <&macro_tap &kp KP_NUMBER_4>
-                , <&macro_release &kp LEFT_ALT>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_0>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_2>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_2>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_4>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
         };
 
         ccedille: ccedille {
@@ -86,13 +104,19 @@
             #binding-cells = <0>;
             wait-ms = <20>;
             tap-ms = <10>;
-            bindings 
-                = <&macro_press &kp LEFT_ALT>
-                , <&macro_tap &kp KP_NUMBER_0>
-                , <&macro_tap &kp KP_NUMBER_2>
-                , <&macro_tap &kp KP_NUMBER_3>
-                , <&macro_tap &kp KP_NUMBER_1>
-                , <&macro_release &kp LEFT_ALT>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_0>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_2>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_3>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_1>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
         };
 
         euro: euro {
@@ -101,13 +125,19 @@
             #binding-cells = <0>;
             wait-ms = <20>;
             tap-ms = <10>;
-            bindings 
-                = <&macro_press &kp LEFT_ALT>
-                , <&macro_tap &kp KP_NUMBER_0>
-                , <&macro_tap &kp KP_NUMBER_1>
-                , <&macro_tap &kp KP_NUMBER_2>
-                , <&macro_tap &kp KP_NUMBER_8>
-                , <&macro_release &kp LEFT_ALT>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_0>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_1>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_2>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_8>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
         };
     };
 
@@ -137,7 +167,7 @@
 
             label = "Base";
             bindings = <
-&kp W         &kp B     &eaccent  &kp P     &kp O        &eaccent2             &euro           &kp V       &kp D                 &kp L  &kp J  &kp Z
+&kp W         &kp B     &eaccent  &kp P     &kp O        &eaccent2             &kp CARET       &kp V       &kp D                 &kp L  &kp J  &kp Z
 &hm CAPS TAB  &kp A     &kp U     &kp I     &lt 4 E      &kp COMMA             &kp C           &lt 3 T     &kp S                 &kp R  &kp N  &kp M
 &kp LCTRL     &aaccent  &kp Y     &kp X     &kp DOT      &kp K                 &kp APOSTROPHE  &kp Q       &kp G                 &kp H  &kp F  &ccedille
                                   &kp LGUI  &lt 1 SPACE  &hm LEFT_ALT ENTER    &kp RET         &lt 2 BSPC  &hm LC(LEFT_ALT) ESC
