@@ -241,10 +241,19 @@
         Game {
             label = "Game";
             bindings = <
-&kp ESC         &kp Q  &kp W  &kp E         &kp R      &kp T        &trans   &trans    &kp UP         &trans     &trans  &kp BSPC
-&kp TAB         &kp A  &kp S  &kp D         &kp F      &kp G        &trans   &kp LEFT  &kp DOWN       &kp RIGHT  &trans  &trans
-&kp LEFT_SHIFT  &kp Z  &kp X  &kp C         &kp V      &kp B        &trans   &trans    &trans         &trans     &trans  &trans
-                              &kp LEFT_ALT  &kp SPACE  &kp ENTER    &kp RET  &to 0     &kp RIGHT_ALT
+&kp ESC         &kp Q  &kp W  &kp E         &kp R      &kp T          &trans   &trans    &kp UP         &trans     &trans  &kp BSPC
+&kp LCTRL       &kp A  &kp S  &kp D         &kp F      &kp G          &trans   &kp LEFT  &kp DOWN       &kp RIGHT  &trans  &trans
+&kp LEFT_SHIFT  &kp Z  &kp X  &kp C         &kp V      &kp B          &trans   &trans    &trans         &trans     &trans  &kp TAB
+                              &kp LEFT_ALT  &kp SPACE  &lt 6 ENTER    &kp RET  &to 0     &kp RIGHT_ALT
+            >;
+        };
+
+        game_num {
+            bindings = <
+&trans   &trans           &trans           &trans           &trans           &trans             &trans  &trans  &trans  &trans  &trans  &trans
+&kp TAB  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_4  &kp KP_NUMBER_5    &trans  &trans  &trans  &trans  &trans  &trans
+&trans   &kp KP_NUMBER_6  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0    &trans  &trans  &trans  &trans  &trans  &trans
+                                           &trans           &trans           &trans             &trans  &trans  &trans
             >;
         };
     };
