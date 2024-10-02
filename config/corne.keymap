@@ -150,7 +150,7 @@
         };
 
         lang {
-            bindings = <&kp C_AL_KEYBOARD_LAYOUT>;
+            bindings = <&kp LG(SPACE)>;
             key-positions = <12 13>;
         };
     };
@@ -242,7 +242,7 @@
             label = "Game";
             bindings = <
 &kp ESC         &kp Q  &kp W  &kp E         &kp R      &kp T          &trans   &trans    &kp UP         &trans     &trans  &kp BSPC
-&kp LCTRL       &kp A  &kp S  &kp D         &kp F      &kp G          &trans   &kp LEFT  &kp DOWN       &kp RIGHT  &trans  &trans
+&kp LCTRL       &kp A  &kp S  &kp D         &kp F      &kp G          &trans   &kp LEFT  &kp DOWN       &kp RIGHT  &trans  &kp P
 &kp LEFT_SHIFT  &kp Z  &kp X  &kp C         &kp V      &kp B          &trans   &trans    &trans         &trans     &trans  &kp TAB
                               &kp LEFT_ALT  &kp SPACE  &lt 6 ENTER    &kp RET  &to 0     &kp RIGHT_ALT
             >;
