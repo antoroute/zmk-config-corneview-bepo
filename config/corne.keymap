@@ -139,6 +139,25 @@
                 <&macro_release>,
                 <&kp LEFT_ALT>;
         };
+
+        eaccent3: eaccent3 {
+            compatible = "zmk,behavior-macro";
+            label = "EACCENT3";
+            #binding-cells = <0>;
+            wait-ms = <20>;
+            tap-ms = <10>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_1>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_3>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_6>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+        };
     };
 
     combos {
@@ -167,8 +186,8 @@
 
             label = "Base";
             bindings = <
-&kp W         &kp B     &eaccent  &kp P     &kp O        &eaccent2             &hm CARET AT        &kp V       &kp D                 &kp L  &kp J  &kp Z
-&hm CAPS TAB  &kp A     &kp U     &kp I     &lt 4 E      &kp COMMA             &kp C               &lt 3 T     &kp S                 &kp R  &kp N  &kp M
+&kp W         &kp B     &eaccent  &kp P     &kp O        &eaccent2             &eaccent3           &kp V       &kp D                 &kp L  &kp J  &kp Z
+&hm CAPS TAB  &hm AT A  &kp U     &kp I     &lt 4 E      &kp COMMA             &kp C               &lt 3 T     &kp S                 &kp R  &kp N  &kp M
 &kp LCTRL     &aaccent  &kp Y     &kp X     &kp DOT      &kp K                 &kp APOSTROPHE      &kp Q       &kp G                 &kp H  &kp F  &ccedille
                                   &kp LGUI  &lt 1 SPACE  &hm LEFT_ALT ENTER    &hm LEFT_SHIFT RET  &lt 2 BSPC  &hm LC(LEFT_ALT) ESC
             >;
